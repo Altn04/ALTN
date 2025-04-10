@@ -44,8 +44,8 @@ if __name__ == "__main__":
     # Параллельные процессы
     Thread(target=cook_soup).start()       # Суп (10 + 30 мин)
     Thread(target=make_mashed_potatoes).start()  # Пюре (5 + 15 мин)
-    #Thread(target=make_salad).start()      # Салат (10 + 2 мин)
-    #Thread(target=make_tea).start()        # Чай (5 + 2 мин)
+    Thread(target=make_salad).start()      # Салат (10 + 2 мин)
+    Thread(target=make_tea).start()        # Чай (5 + 2 мин)
 
     # Ждём завершения всех процессов
     time.sleep(42)  # Максимальное время (суп)
